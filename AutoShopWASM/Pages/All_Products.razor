@@ -1,0 +1,612 @@
+@page "/all_products"
+@inject NavigationManager NavigationManager
+
+<div class="column-layout all-products-container">
+    <div class="column-layout page-content">
+        <div class="column-layout inner-pages-header">
+            <img src="assets/AutoDeals_Logo.svg" class="image" />
+            <p class="typography__body-1 text">
+                Enjoy 20% off on all your weekend purchases
+            </p>
+        </div>
+        <div class="row-layout content">
+            <div class="row-layout group">
+                <div class="column-layout filters">
+                    <div class="column-layout group_1">
+                        <p class="typography__subtitle-2 text_1">
+                            CATEGORY
+                        </p>
+                        <IgbList class="list" all_products-scope>
+                            <IgbListItem>
+                                <div slot="title">General Body Parts</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Lighting</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Engine &amp; Drivetrain</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Break &amp; Suspension</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Interior</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Exterior</div>
+                            </IgbListItem>
+                        </IgbList>
+                        <a class="typography__body-2 hyperlink">
+                            Show All
+                        </a>
+                    </div>
+                    <div class="column-layout group_1">
+                        <p class="typography__subtitle-2 text_1">
+                            PRICE
+                        </p>
+                        <IgbList class="list" all_products-scope>
+                            <IgbListItem>
+                                <div slot="title">$1 - $10</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">$10 - $20</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">$20 - $50</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">$50 - $100</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">$100 and Up</div>
+                            </IgbListItem>
+                        </IgbList>
+                        <a class="typography__body-2 hyperlink">
+                            Show All
+                        </a>
+                    </div>
+                    <div class="column-layout group_1">
+                        <p class="typography__subtitle-2 text_1">
+                            BRAND
+                        </p>
+                        <IgbList class="list" all_products-scope>
+                            <IgbListItem>
+                                <div slot="title">Anzo</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Dorman</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Hella</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Keystone Collision</div>
+                            </IgbListItem>
+                            <IgbListItem>
+                                <div slot="title">Pilot Certified</div>
+                            </IgbListItem>
+                        </IgbList>
+                        <a class="typography__body-2 hyperlink">
+                            Show All
+                        </a>
+                    </div>
+                </div>
+                <div class="column-layout products">
+                    <div class="row-layout group_2">
+                        <h5 class="content_1">
+                            Newest Arrivals
+                        </h5>
+                        <div class="row-layout group_3">
+                            <p class="typography__body-1 content_1">
+                                1-6 OF 202 RESULTS
+                            </p>
+                            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" @ref="_button" @onclick="@(e => _dropdown!.ToggleAsync(_button))" class="button" all_products-scope>
+                                <span>SORT BY</span>
+                                <span class="material-icons">
+                                    keyboard_arrow_down
+                                </span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                            <IgbDropdown @ref="_dropdown" class="dropdown" all_products-scope>
+                                <IgbDropdownItem>
+                                    Newest Arrivals
+                                </IgbDropdownItem>
+                                <IgbDropdownItem>
+                                    Featured
+                                </IgbDropdownItem>
+                                <IgbDropdownItem>
+                                    Price: Low to High
+                                </IgbDropdownItem>
+                                <IgbDropdownItem>
+                                    Price: High to Low
+                                </IgbDropdownItem>
+                                <IgbDropdownItem>
+                                    Avg. Customer Review
+                                </IgbDropdownItem>
+                            </IgbDropdown>
+                        </div>
+                    </div>
+                    <div class="row-layout group_4">
+                        <IgbCard @onclick="@(e => Navigate("/product_details"))" class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Alternator1.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Gold Alternator
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $59.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_1" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_91150104_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Tail Lamp Assembly
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $19.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_2" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_39703145_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Spark Plugs
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $11.00
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_3" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_20993125_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Oil Filters
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $24.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_4" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_7243970_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Engine pistons and cog
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $32.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_5" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_114068560_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Winter tires set
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $44.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_6" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_15825769_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Carboxylic bumper
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $49.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_7" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_63371615_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Battery
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $24.95
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_8" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_79651016_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Car Wheel
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $59.90
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_9" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_51128759_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Chrome exhaust pipe
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $34.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_10" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_12011807_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Headlight Assembly
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $49.50
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_11" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                        <IgbCard class="card" all_products-scope>
+                            <IgbCardMedia class="media-content" all_products-scope>
+                                <img src="assets/Depositphotos_303215620_l-2015.jpg" class="image_1" />
+                            </IgbCardMedia>
+                            <IgbCardHeader>
+                                <h3 slot="title">
+                                    Braking Discs
+                                </h3>
+                                <h5 slot="subtitle">
+                                    This is a brief product description, not longer than 2 lines of text.
+                                </h5>
+                            </IgbCardHeader>
+                            <IgbCardContent class="body-content" all_products-scope>
+                                <h6 class="h6">
+                                    $21.99
+                                </h6>
+                            </IgbCardContent>
+                            <IgbCardActions class="actions-content" all_products-scope>
+                                <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" slot="start" class="button_1 button_1_12" all_products-scope>
+                                    <span class="material-icons icon">
+                                        add_shopping_cart
+                                    </span>
+                                    <span>ADD TO CART</span>
+                                    <IgbRipple></IgbRipple>
+                                </IgbButton>
+                            </IgbCardActions>
+                        </IgbCard>
+                    </div>
+                    <div class="row-layout group_5">
+                        <div class="row-layout group_6">
+                            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" all_products-scope>
+                                <span class="material-icons">
+                                    arrow_back
+                                </span>
+                                <span>PREVIOUS</span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                            <IgbButtonGroup class="button-group" all_products-scope>
+                                <IgbToggleButton>
+                                    1
+                                    <IgbRipple></IgbRipple>
+                                </IgbToggleButton>
+                                <IgbToggleButton>
+                                    2
+                                    <IgbRipple></IgbRipple>
+                                </IgbToggleButton>
+                                <IgbToggleButton>
+                                    3
+                                    <IgbRipple></IgbRipple>
+                                </IgbToggleButton>
+                                <IgbToggleButton>
+                                    4
+                                    <IgbRipple></IgbRipple>
+                                </IgbToggleButton>
+                                <IgbToggleButton>
+                                    5
+                                    <IgbRipple></IgbRipple>
+                                </IgbToggleButton>
+                            </IgbButtonGroup>
+                            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" all_products-scope>
+                                <span>NEXT</span>
+                                <span class="material-icons">
+                                    arrow_forward
+                                </span>
+                                <IgbRipple></IgbRipple>
+                            </IgbButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-layout sitemap">
+            <div class="column-layout group_7">
+                <p class="typography__subtitle-2 text_1">
+                    Contact Us
+                </p>
+                <p class="typography__body-2 text_1">
+                    1234 Street Name, CityName, ST
+                </p>
+                <p class="typography__body-2 text_1">
+                    10520 United States
+                </p>
+                <p class="typography__subtitle-2 text_2">
+                    Phone Number
+                </p>
+                <p class="typography__body-2 text_1">
+                    1-234-567-8901
+                </p>
+            </div>
+            <div class="column-layout group_8">
+                <p class="typography__subtitle-2 text_1">
+                    Help
+                </p>
+                <p class="typography__body-2 text_1">
+                    FAQ
+                </p>
+                <p class="typography__body-2 text_1">
+                    Returns
+                </p>
+                <p class="typography__body-2 text_1">
+                    Coupons &amp; Discounts
+                </p>
+                <p class="typography__body-2 text_1">
+                    Shipping &amp; Returns
+                </p>
+            </div>
+            <div class="column-layout group_8">
+                <p class="typography__subtitle-2 text_1">
+                    About Us
+                </p>
+                <p class="typography__body-2 text_1">
+                    Company Info
+                </p>
+                <p class="typography__body-2 text_1">
+                    Press Releases
+                </p>
+                <p class="typography__body-2 text_1">
+                    Careers
+                </p>
+                <p class="typography__body-2 text_1">
+                    Reviews
+                </p>
+            </div>
+            <div class="column-layout group_8">
+                <p class="typography__subtitle-2 text_1">
+                    Services
+                </p>
+                <p class="typography__body-2 text_1">
+                    Buy Online
+                </p>
+                <p class="typography__body-2 text_1">
+                    In-Store
+                </p>
+                <p class="typography__body-2 text_1">
+                    Repair Help
+                </p>
+                <p class="typography__body-2 text_1">
+                    Find a Repair Shop
+                </p>
+            </div>
+            <div class="column-layout group_8">
+                <p class="typography__subtitle-2 text_1">
+                    Blog
+                </p>
+                <p class="typography__body-2 text_1">
+                    Car Building Basics
+                </p>
+                <p class="typography__body-2 text_1">
+                    Do it Yourself
+                </p>
+                <p class="typography__body-2 text_1">
+                    Your Home Workshop
+                </p>
+                <p class="typography__body-2 text_1">
+                    Advanced Bulding
+                </p>
+            </div>
+        </div>
+        <div class="row-layout footer">
+            <p class="typography__body-2 text_3">
+                Copyright ©2021 AutoShop.com, Inc. All Rights Reserved.
+            </p>
+            <div class="row-layout group_9">
+                <p class="typography__body-2 text_4">
+                    Terms of Use
+                </p>
+                <p class="typography__body-2 text_4">
+                    Privacy Policy
+                </p>
+                <p class="typography__body-2 text_4">
+                    Site Map
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private IgbDropdown _dropdown;
+    private IgbButton _button;
+
+    public void Navigate(string path)
+    {
+        NavigationManager.NavigateTo(path);
+    }
+}

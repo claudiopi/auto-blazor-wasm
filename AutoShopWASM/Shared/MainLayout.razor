@@ -1,0 +1,69 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="column-layout master-view-container">
+    <div class="row-layout group">
+        <img src="assets/AutoShop_Logo.svg" @onclick="@(e => Navigate("/home"))" class="image" />
+        <div class="row-layout group_1">
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" @onclick="@(e => Navigate("/all_products"))" class="button" master_view-scope>
+                Auto Body Parts
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                Lighting
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                Engine &amp; Drivetrain
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                Brakes &amp; Suspension
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                Engine &amp; Drivetrain
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                Interior
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                Exterior
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+        <div class="row-layout group_2">
+            <IgbIconButton Variant="IconButtonVariant.Flat" class="icon-button" master_view-scope>
+                <span class="material-icons icon">
+                    search
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbIconButton>
+            <IgbIconButton Variant="IconButtonVariant.Flat" class="icon-button" master_view-scope>
+                <span class="material-icons icon">
+                    account_circle
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbIconButton>
+            <IgbIconButton Variant="IconButtonVariant.Flat" @onclick="@(e => Navigate("/shopping_cart"))" class="icon-button" master_view-scope>
+                <span class="material-icons icon">
+                    shopping_cart
+                </span>
+                <IgbRipple></IgbRipple>
+            </IgbIconButton>
+        </div>
+    </div>
+    <div class="view-container">
+        @Body
+    </div>
+</div>
+
+@code {
+
+    public void Navigate(string path)
+    {
+        NavigationManager.NavigateTo(path);
+    }
+}

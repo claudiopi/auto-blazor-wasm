@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IgniteUI.Blazor.Trial" Version="24.1.67" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Shared/MainLayout.razor.css" CssScope="master_view-scope" />
+    <None Update="Pages/Home.razor.css" CssScope="home-scope" />
+    <None Update="Pages/All_Products.razor.css" CssScope="all_products-scope" />
+    <None Update="Pages/Product_Details.razor.css" CssScope="product_details-scope" />
+    <None Update="Pages/Shopping_Cart.razor.css" CssScope="shopping_cart-scope" />
+  </ItemGroup>
+
+</Project>
